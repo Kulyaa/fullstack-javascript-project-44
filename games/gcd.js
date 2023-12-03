@@ -8,10 +8,10 @@ const gameLogic = () => {
     let randNum2 = randNumber(1, 50);
     const questions = `${randNum1} ${randNum2}`;
     while (randNum1 != 0 & randNum2 != 0){
-        if(randNum1 > randNum2) {
+        if (randNum1 > randNum2) {
             randNum1 = randNum1 % randNum2;
         }
-        else{
+        else {
             randNum2 = randNum2 % randNum1;
         }
     }
