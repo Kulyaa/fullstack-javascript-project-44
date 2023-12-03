@@ -22,7 +22,7 @@ const gameLogic = () => {
         default :
             break;
     }
-    const questions = `${randNum1}${randOperator}${randNum2}`;
+    const questions = `${randNum1} ${randOperator} ${randNum2}`;
     return [questions, String(correctAnswer)];
 }
 export default () => startGame(comment, gameLogic);
