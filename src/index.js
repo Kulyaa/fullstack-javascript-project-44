@@ -18,6 +18,6 @@ const startGame = (description, generateRound) => {
         }
         console.log('Correct!');
     }
-    console.log(`Congratulations ${name}`);
+    console.log(`Congratulations, ${name}`);
 }
 export default startGame;
