@@ -10,19 +10,19 @@ const gameLogic = () => {
     let correctAnswer = 0;
     const randOperator = operators[randNumber(0, operators.length - 1)];
     switch (randOperator) {
-        case "+" :
+        case '+':
             correctAnswer = randNum1 + randNum2;
             break;
-        case "-" :
+        case '-':
             correctAnswer = randNum1 - randNum2;
             break;
-        case "*" :
+        case '*':
             correctAnswer = randNum1 * randNum2;
             break;
-        default :
+        default:
             break;
     }
     const questions = `${randNum1} ${randOperator} ${randNum2}`;
     return [questions, String(correctAnswer)];
-}
+};
 export default () => startGame(comment, gameLogic);
