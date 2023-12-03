@@ -26,3 +26,4 @@ const gameLogic = () => {
     return [questions, String(correctAnswer)];
 };
 export default () => startGame(comment, gameLogic);
+
