@@ -7,14 +7,15 @@ const comment = 'What number is missing in the progression?';
 const gameLogic = () => {
     let randNum1 = randNumber(1, 10);
     let randNum2 = randNumber(10, 15);
-    const questions = [];
+    const arrNums = [];
     for (let i = 1; i < randNum2; i += 1) {
-        questions.push(i * randNum1);
+        arrNums.push(i * randNum1);
 
     }
-    const randel = randNumber(0, questions.length);
-    const correctAnswer = questions[randel];
-    questions[randel] = '..';
+    const randel = randNumber(0, arrNums.length);
+    const correctAnswer = arrNums[randel];
+    arrNums[randel] = '..';
+    const questions = arrNums.join(' ');
     return [questions, String(correctAnswer)];
 }
 export default () => startGame(comment, gameLogic);
