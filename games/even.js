@@ -1,5 +1,5 @@
-import randNumber from '../src/randNumber';
-import startGame from '../src/index';
+import randNumber from '../src/randNumber.js';
+import startGame from '../src/index.js';
 
 const comment = 'Answer "yes" if the number is even, otherwise answer "no".';
 
