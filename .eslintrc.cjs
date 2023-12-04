@@ -23,5 +23,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
+    'import/extensions': ['error', 'ignorePackages'],
+    'import/no-unresolved': 'off',
   },
 };
