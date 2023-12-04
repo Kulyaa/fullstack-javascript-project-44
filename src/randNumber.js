@@ -1,5 +1,5 @@
 export default (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+  const minr = Math.ceil(min);
+  const maxr = Math.floor(max);
+  return Math.floor(Math.random() * (maxr - minr)) + minr;
+};
