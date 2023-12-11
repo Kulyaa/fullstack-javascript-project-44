@@ -1,5 +1,5 @@
-import randNumber from '../src/randNumber.js';
-import startGame from '../src/index.js';
+import randNumber from '../randNumber.js';
+import startGame from '../index.js';
 
 const comment = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const gameLogic = () => {
