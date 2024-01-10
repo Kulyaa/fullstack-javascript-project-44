@@ -38,6 +38,6 @@ make brain-prime
 [![asciicast](https://asciinema.org/a/n3ygwuwTrltcehDoRTXFEmlCD.svg)](https://asciinema.org/a/n3ygwuwTrltcehDoRTXFEmlCD)
 
 ## Asciinema brain-even
-<script async id="asciicast-oLk7Kxzjv58FA8tGhQ7ucPquW" src="https://asciinema.org/a/oLk7Kxzjv58FA8tGhQ7ucPquW.js"></script>
+[![asciicast](https://asciinema.org/a/oLk7Kxzjv58FA8tGhQ7ucPquW.svg)](https://asciinema.org/a/oLk7Kxzjv58FA8tGhQ7ucPquW)
 
 This my first project Brain Games!
