@@ -35,6 +35,7 @@ make brain-progression
 ```bash
 make brain-prime
 ```
-
+## brain-games
+[![asciicast](https://asciinema.org/a/n3ygwuwTrltcehDoRTXFEmlCD.svg)](https://asciinema.org/a/n3ygwuwTrltcehDoRTXFEmlCD)
 
 This my first project Brain Games!
