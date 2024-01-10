@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 import userName from './cli.js';
 
+const roundsCount = 3;
+
 const startGame = (description, generateRound) => {
-  const roundsCount = 3;
   const name = userName();
   console.log(description);
 
