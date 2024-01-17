@@ -1,14 +1,12 @@
 import randNumber from '../randNumber.js';
 import startGame from '../index.js';
 
-const comment = 'What number is missing in the progression?';
+const rules = 'What number is missing in the progression?';
 
-const gameLogic = () => {
-  const randNum1 = randNumber(1, 10);
-  const randNum2 = randNumber(10, 15);
+const generateProgression = (num1, num2) => {
   const arrNums = [];
-  for (let i = 1; i < randNum2; i += 1) {
-    arrNums.push(i * randNum1);
+  for (let i = 1; i < num2; i += 1) {
+    arrNums.push(i * num1);
   }
   const randel = randNumber(0, arrNums.length);
   const correctAnswer = arrNums[randel];
@@ -16,4 +14,10 @@ const gameLogic = () => {
   const questions = arrNums.join(' ');
   return [questions, String(correctAnswer)];
 };
-export default () => startGame(comment, gameLogic);
+
+const generateRound = () => {
+  const randNum1 = randNumber(1, 10);
+  const randNum2 = randNumber(10, 15);
+  return generateProgression(randNum1, randNum2);
+};
+export default () => startGame(rules, generateRound);

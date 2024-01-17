@@ -1,17 +1,20 @@
 import randNumber from '../randNumber.js';
 import startGame from '../index.js';
 
-const comment = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const gameLogic = () => {
-  const questions = randNumber(1, 100);
-  if (questions < 2) {
-    return [String(questions), 'no'];
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const calculate = (num) => {
+  if (num < 2) {
+    return [String(num), 'no'];
   }
-  for (let i = 2; i < questions; i += 1) {
-    if (questions % i === 0) return [String(questions), 'no'];
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) return [String(num), 'no'];
   }
-
-  return [String(questions), 'yes'];
+  return [String(num), 'yes'];
 };
 
-export default () => startGame(comment, gameLogic);
+const generateRound = () => {
+  const questions = randNumber(1, 100);
+  return calculate(questions);
+};
+
+export default () => startGame(rules, generateRound);
