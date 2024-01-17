@@ -3,7 +3,7 @@ import startGame from '../index.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const calculate = (num) => {
+const isEven = (num) => {
   let correctAnswer = '';
   if (num % 2 === 0) {
     correctAnswer = 'yes';
@@ -15,7 +15,7 @@ const calculate = (num) => {
 
 const generateRound = () => {
   const questions = randNumber(1, 50);
-  const correctAnswer = calculate(questions);
+  const correctAnswer = isEven(questions);
   return [questions, correctAnswer];
 };
 

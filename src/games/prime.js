@@ -2,7 +2,7 @@ import randNumber from '../randNumber.js';
 import startGame from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const calculate = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return [String(num), 'no'];
   }
@@ -14,7 +14,7 @@ const calculate = (num) => {
 
 const generateRound = () => {
   const questions = randNumber(1, 100);
-  return calculate(questions);
+  return isPrime(questions);
 };
 
 export default () => startGame(rules, generateRound);
