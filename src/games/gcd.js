@@ -14,7 +14,7 @@ const generateRound = () => {
   const randNum1 = randNumber(1, 50);
   const randNum2 = randNumber(1, 50);
   const questions = `${randNum1} ${randNum2}`;
-  const correctAnswer = getGcd();
+  const correctAnswer = getGcd(randNum1, randNum2);
 
   return [questions, String(correctAnswer)];
 };
