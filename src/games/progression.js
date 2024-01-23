@@ -21,4 +21,5 @@ const generateRound = () => {
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
+
 export default () => startGame(rules, generateRound);
