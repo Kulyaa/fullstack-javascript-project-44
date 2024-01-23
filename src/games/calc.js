@@ -13,7 +13,7 @@ const calculation = (num1, num2, operator) => {
     case '+': return num1 + num2;
     case '-': return num1 - num2;
     case '*': return num1 * num2;
-    default: throw new Error(`Invalid operator -${operator}`);
+    default: throw new Error(`Invalid operator - ${operator}`);
   }
 };
 
@@ -21,8 +21,8 @@ const generateRound = () => {
   const randNum1 = randNumber(1, 50);
   const randNum2 = randNumber(1, 50);
   const randOperator = getRandomOperator();
-  const correctAnswer = calculation(randNum1, randNum2, randOperator);
-  const questions = `${randNum1} ${randOperator} ${randNum2}`;
-  return [questions, String(correctAnswer)];
+  const correctAnswer = String(calculation(randNum1, randNum2, randOperator));
+  const question = `${randNum1} ${randOperator} ${randNum2}`;
+  return [question, correctAnswer];
 };
 export default () => startGame(rules, generateRound);

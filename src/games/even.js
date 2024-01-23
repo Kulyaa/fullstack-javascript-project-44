@@ -3,20 +3,12 @@ import startGame from '../index.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEven = (num) => {
-  let correctAnswer = '';
-  if (num % 2 === 0) {
-    correctAnswer = 'yes';
-  } if (num % 2 === 1) {
-    correctAnswer = 'no';
-  }
-  return correctAnswer;
-};
+const isEven = (num) => num % 2 === 0;
 
 const generateRound = () => {
-  const questions = randNumber(1, 50);
-  const correctAnswer = isEven(questions);
-  return [questions, correctAnswer];
+  const question = randNumber(1, 50);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
 export default () => startGame(rules, generateRound);
